@@ -1,0 +1,25 @@
+header{
+    background: linear-gradient(180deg, #102347 0%, #181818 100%);
+    height: 220px;
+    display: flex;/*Alinhando os campos*/
+    align-items: center;/*Alinhando no centro da altura*/
+    justify-content: center;/*Alinhando no centro da tela*/
+}
+.cabecalho-logo-principal{
+    display: flex;/*Colocando os itens alinhados um do lado do outro*/
+    flex-direction: column;/*Definindo a direção dos itens*/
+    align-items: center;/*alinhando eles ao centro*/
+}
+
+.cabecalho-logo-principal img{
+    width: 235px;/*Definindo tamanho da imagem*/
+}
+
+.cabecalho-logo-principal h1{
+    margin-top: 15px;/*Colocando margem na parte superior do h1 que esta dentro da div*/
+}
+
+.cabecalho-logo-principal p{
+    font-size: 14px;/*Tamanho da fonte*/
+    font-weight: 300;/*Peso da fonte */
+}

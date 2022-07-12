@@ -13,3 +13,14 @@ a, a:hover, a:visited{
     color: unset;/*Sem cor*/
     text-decoration: none;/*Sem undeline*/
 }
+
+.container-principal{
+    width: 100%;/*Tamanho dele em relacao a tela*/
+    max-width: 1200px;/*Tamanho maximo*/
+    margin: 0 auto;/*definindo a margem superior e nas laterais*/
+}
+
+/*Definindo o id dea section*/
+#sales{
+    padding: 40px 10px;
+}
