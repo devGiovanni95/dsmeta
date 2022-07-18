@@ -19,13 +19,21 @@ function SalesCard() {
     const[sales, setSales] = useState<Sale[]>([]);
 
     useEffect(() => {
+
+        console.log(minDate);//para mostrar como esta sendol mostrada a data 
+
+        //Pegando a data e atribuindo a constante, convertendo a data 
+        //com uma formatacao padrao e recortando so a data e removendo a hora
+        const dmin = minDate.toISOString().slice(0, 10);
+        const dmax = maxDate.toISOString().slice(0, 10);
+
         /*console.log("teste");*/
-        axios.get(`${BASE_URL}/sales`)
+        axios.get(`${BASE_URL}/sales?minDate=${dmin}&maxDate=${dmax}`)
         .then(response => {
             //console.log(response.data);
             setSales(response.data.content);
         });
-    },[]);
+    },[minDate, maxDate]);//definindo que senpre que haja alteracao nestes campos voce possa atualizar os dados
 
     return(
 
@@ -80,7 +88,7 @@ function SalesCard() {
                                     <td>R$ {sale.amount.toFixed(2)}</td>
                                     <td>
                                         <div className="red-btn-container">
-                                            <NotificationButton/>
+                                            <NotificationButton saleId={sale.id}/>
                                         </div>
                                     </td>
         
